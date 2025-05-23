@@ -17,9 +17,8 @@ button {
 }
 .lists {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  padding:0 2rem;
 }
 h1{
   text-align: center;
