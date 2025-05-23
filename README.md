@@ -1,13 +1,13 @@
 # 🎵 Music Box Web App
 
-A React application that lets you search for songs via the Shazam API, view search results, add songs to a playlist, and watch YouTube videos of those songs — all in one place.
+This React application allows you to look for songs, add them to a playlist, and access links to their videos on Youtube.
 
 ## 🚀 Features
 
 - 🔍 **Live search** for songs using the Shazam API
 - 📋 **Search results list** with song metadata
 - ➕ **Add to Playlist** feature
-- ▶️ **YouTube video integration** for playlist items
+- ▶️ **YouTube video access link** for items on the playlist using the Youtube API
 - ⚡ Fast and responsive user interface built with React
 
 ## 🖼️ Demo
@@ -16,8 +16,12 @@ A React application that lets you search for songs via the Shazam API, view sear
 
 
 ## 📷 Screenshots
+![image](https://github.com/user-attachments/assets/dd4e79ed-8011-4700-920f-d005c71e490d)
+![image](https://github.com/user-attachments/assets/8fb4c572-dba2-493a-8974-7e9f6d311aca)
+![image](https://github.com/user-attachments/assets/32d3e297-642b-4d73-8ebe-5cc5a175ad54)
 
-*(Add screenshots of your app here)*
+
+
 
 ## 🛠️ Built With
 
