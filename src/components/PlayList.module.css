@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.track{
+    margin-bottom: 1rem; 
+}
+.remove {
+  border: 2px solid black;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+.remove:hover {
+  cursor: pointer;
+}
+
+.remove:active {
+  font-weight: bold;
+}

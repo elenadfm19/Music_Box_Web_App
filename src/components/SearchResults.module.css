@@ -1,0 +1,23 @@
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+.track{
+    margin-bottom: 2rem;
+}
+.add{
+    border:2px solid black;
+    display: inline-block;
+    margin-bottom:0.3rem;
+    border-radius: 0.5rem;
+    padding:0.25rem;
+}
+.add:hover{
+    cursor: pointer;
+}
+.add:active {
+    font-weight: bold;
+}
+
+ 

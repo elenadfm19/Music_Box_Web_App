@@ -1,35 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import SearchBar from "./components/SearchBar.jsx";
+import SearchResults from "./components/SearchResults.jsx";
+import PlayList from "./components/PlayList.jsx";
+
+const urlSearch = "https://api.spotify.com/v1/search?q=";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [query, setQuery] = useState("");
+  const [searchList, setSearchList] = useState([]);
+  const [playList, setPlayList] = useState([]);
 
+  useEffect(() => {
+    getTracks();
+  }, [query]);
+
+  async function getTracks() {
+    const encodedQuery = encodeURIComponent(query);
+    const url = `https://shazam.p.rapidapi.com/search?term=${encodedQuery}&locale=en-US&offset=0&limit=10`;
+    const options = {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": "82691be13amsh0b24a26dc093c4bp1576a1jsnef4dbac8b280",
+        "x-rapidapi-host": "shazam.p.rapidapi.com",
+      },
+    };
+    console.log(url);
+    try {
+      const response = await fetch(url, options);
+      const jsonResponse = await response.json();
+      console.log(jsonResponse);
+      const tracks = jsonResponse.tracks.hits.map((hit) => hit.track);
+      setSearchList(tracks);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  console.log("hola");
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1 className="title">Music Box</h1>
+      <SearchBar setQuery={setQuery} />
+      <div className="lists">
+        <div className="searchList">
+          <SearchResults
+            searchList={searchList}
+            playList={playList}
+            setPlayList={setPlayList}
+          />
+        </div>
+        <div className="playList">
+          <PlayList
+            searchList={searchList}
+            playList={playList}
+            setPlayList={setPlayList}
+          />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

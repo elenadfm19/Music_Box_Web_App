@@ -1,0 +1,25 @@
+p {
+    padding:0;
+    margin: 0; 
+    
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 2px black solid;
+  border-bottom: 2px black solid;
+  padding: 5px 0;
+  font-family: 'Calibri', sans-serif;
+  font-weight: bold;
+}
+
+.info {
+  margin-left: 0;
+}
+
+img {
+  width: 100px;
+  height: auto;
+  margin-right: 0;
+}
