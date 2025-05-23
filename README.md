@@ -1,12 +1,34 @@
-# React + Vite
+# 🎵 Music Box Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that lets you search for songs via the Shazam API, view search results, add songs to a playlist, and watch YouTube videos of those songs — all in one place.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 **Live search** for songs using the Shazam API
+- 📋 **Search results list** with song metadata
+- ➕ **Add to Playlist** feature
+- ▶️ **YouTube video integration** for playlist items
+- ⚡ Fast and responsive user interface built with React
 
-## Expanding the ESLint configuration
+## 🖼️ Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[Live Demo on Netlify]  (https://music-box-web-app.netlify.app/)
+
+
+## 📷 Screenshots
+
+*(Add screenshots of your app here)*
+
+## 🛠️ Built With
+
+- [React](https://reactjs.org/)
+- [Shazam API](https://rapidapi.com/apidojo/api/shazam) via RapidAPI
+- [YouTube Search API or embedded YouTube links](https://developers.google.com/youtube)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [CSS Modules / Styled Components]
+
+## 📦 Installation
+
+1. Clone the repo:
+   git clone https://github.com/elenadfm19/Music_Box_Web_App.git
+
