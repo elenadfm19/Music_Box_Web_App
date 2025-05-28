@@ -8,14 +8,11 @@ function Player({ track }) {
   useEffect(() => {
     async function getVideo() {
       const encodedQuery = encodeURIComponent(track.title + ' ' + track.subtitle);
-      console.log(encodedQuery);
       const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodedQuery}&type=video&maxResults=1&key=${key}`;
 
       try {
         const response = await fetch(url);
         const jsonResponse = await response.json();
-        console.log(jsonResponse);
-        console.log(jsonResponse.items[0].id.videoId);
         setVideoId(jsonResponse.items[0].id.videoId);
         console.log(videoId);
         /*
