@@ -16,17 +16,19 @@ function App() {
   }, [query]);
 
   async function getTracks() {
+    //"x-rapidapi-key": "82691be13amsh0b24a26dc093c4bp1576a1jsnef4dbac8b280",
+    console.log(process.env.REACT_APP_SHAZAM_KEY);
     const encodedQuery = encodeURIComponent(query);
     const url = `https://shazam.p.rapidapi.com/search?term=${encodedQuery}&locale=en-US&offset=0&limit=10`;
     const options = {
       method: "GET",
-      headers: {
-        //"x-rapidapi-key": "82691be13amsh0b24a26dc093c4bp1576a1jsnef4dbac8b280",
+      headers: {        
         "x-rapidapi-key": process.env.REACT_APP_SHAZAM_KEY,
         "x-rapidapi-host": "shazam.p.rapidapi.com",
       },
     };
     console.log(url);
+    console.log(options);
     try {
       const response = await fetch(url, options);
       const jsonResponse = await response.json();
@@ -37,7 +39,6 @@ function App() {
       console.error(error);
     }
   }
-  console.log("hola");
   return (
     <>
       <h1 className="title">Music Box</h1>
