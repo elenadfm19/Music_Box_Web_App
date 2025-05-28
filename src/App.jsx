@@ -10,6 +10,7 @@ function App() {
   const [query, setQuery] = useState("");
   const [searchList, setSearchList] = useState([]);
   const [playList, setPlayList] = useState([]);
+  console.log(process.env);
 
   useEffect(() => {
     getTracks();
