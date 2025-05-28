@@ -5,6 +5,7 @@ function Player({ track }) {
   const [videoId, setVideoId] = useState("");
   //const key = "AIzaSyDcszYoVTzFf7igpETAepxE0wP5HlrtV9k";
   const key = import.meta.env.VITE_YOUTUBE_KEY;
+  console.log(key);
 
   useEffect(() => {
     async function getVideo() {
