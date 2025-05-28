@@ -3,16 +3,13 @@ import styles from './Player.module.css';
 
 function Player({ track }) {
   const [videoId, setVideoId] = useState("");
-  //const key = "AIzaSyDcszYoVTzFf7igpETAepxE0wP5HlrtV9k";
   const key = import.meta.env.VITE_YOUTUBE_KEY;
-  console.log(key);
 
   useEffect(() => {
     async function getVideo() {
       const encodedQuery = encodeURIComponent(track.title + ' ' + track.subtitle);
       console.log(encodedQuery);
       const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodedQuery}&type=video&maxResults=1&key=${key}`;
-      console.log(url);
 
       try {
         const response = await fetch(url);
