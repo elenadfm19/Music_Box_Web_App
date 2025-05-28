@@ -30,7 +30,6 @@ function App() {
     try {
       const response = await fetch(url, options);
       const jsonResponse = await response.json();
-      console.log(jsonResponse);
       const tracks = jsonResponse.tracks.hits.map((hit) => hit.track);
       setSearchList(tracks);
     } catch (error) {
