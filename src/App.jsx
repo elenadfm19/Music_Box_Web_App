@@ -21,7 +21,8 @@ function App() {
     const options = {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "82691be13amsh0b24a26dc093c4bp1576a1jsnef4dbac8b280",
+        //"x-rapidapi-key": "82691be13amsh0b24a26dc093c4bp1576a1jsnef4dbac8b280",
+        "x-rapidapi-key": process.env.shazamKey,
         "x-rapidapi-host": "shazam.p.rapidapi.com",
       },
     };
