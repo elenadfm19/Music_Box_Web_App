@@ -17,7 +17,7 @@ function App() {
 
   async function getTracks() {
     //"x-rapidapi-key": "82691be13amsh0b24a26dc093c4bp1576a1jsnef4dbac8b280",
-    const key=process.env.REACT_APP_SHAZAM_KEY
+    const key=process.env.REACT_APP_SHAZAM_KEY;
     console.log(key);
     const encodedQuery = encodeURIComponent(query);
     const url = `https://shazam.p.rapidapi.com/search?term=${encodedQuery}&locale=en-US&offset=0&limit=10`;
