@@ -4,7 +4,7 @@ import styles from './Player.module.css';
 function Player({ track }) {
   const [videoId, setVideoId] = useState("");
   //const key = "AIzaSyDcszYoVTzFf7igpETAepxE0wP5HlrtV9k";
-  const key = process.env.REACT_APP_YOUTUBE_KEY;
+  const key = import.meta.env.VITE_YOUTUBE_KEY;
 
   useEffect(() => {
     async function getVideo() {
