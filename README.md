@@ -35,4 +35,9 @@ This React application allows you to look for songs, add them to a playlist, and
 
 1. Clone the repo:
    git clone https://github.com/elenadfm19/Music_Box_Web_App.git
-
+   cd reddit-client
+2. Install dependencies:
+   npm install
+3. Run the development server:
+   npm run dev
+4. The app should open at http://localhost:5173.
