@@ -2,7 +2,6 @@
 
     margin-bottom:0.5rem;
     margin-top:0.3rem;
-    padding: 0.25rem;
 }
 
 .link a{
@@ -10,4 +9,5 @@
     border:2px solid black;
     border-radius: 0.5rem;
     text-decoration:none;
+    padding: 0.25rem;
 }
