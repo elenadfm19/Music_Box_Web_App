@@ -1,12 +1,13 @@
 .link{
 
     margin-bottom:0.5rem;
-    margin-top:1rem;
+    margin-top:0.3rem;
+    padding: 0.25rem;
 }
 
 .link a{
     color: black;
-    border:1px solid black;
-    border-radius: 5px;
+    border:2px solid black;
+    border-radius: 0.5rem;
     text-decoration:none;
 }
