@@ -4,4 +4,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   font-family: Calibri;
+  height: 100vh;
+  margin: 0;
 }
