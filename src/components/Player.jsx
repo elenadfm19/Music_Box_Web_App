@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from './Player.module.css';
-const key = import.meta.env.VITE_YOUTUBE_KEY;
+const key = import.meta.env.VITE_GOOGLEAPIS_KEY;
 
 function Player({ track }) {
   const [videoId, setVideoId] = useState("");
