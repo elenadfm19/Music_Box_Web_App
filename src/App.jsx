@@ -3,7 +3,7 @@ import "./App.css";
 import SearchBar from "./components/SearchBar.jsx";
 import SearchResults from "./components/SearchResults.jsx";
 import PlayList from "./components/PlayList.jsx";
-const key = import.meta.env.VITE_SHAZAM_KEY;
+const key = import.meta.env.VITE_RAPIDAPI_KEY;
 
 function App() {
   const [query, setQuery] = useState("");
