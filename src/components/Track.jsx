@@ -1,19 +1,21 @@
 import React from "react";
 import styles from "./Track.module.css";
 
-function Track({ track }) {
+function Track({ track, thumbnail }) {
+  
   return (
     <>
       <div className={styles.content}>
         <div className={styles.info}>
-          <p>Track: {track.title}</p>
+          <p>Track: {track.name}</p>
           <br />
-          <p>Artist: {track.subtitle}</p>
+          <p>Artist: {track.artistName}</p>
+          <br />
+          <p>Album: {track.albumName}</p>
           <br />
         </div>
-        <img src={track.share.image} />
+        <img src={thumbnail} />
       </div>
-      
     </>
   );
 }
