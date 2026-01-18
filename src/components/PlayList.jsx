@@ -2,8 +2,9 @@ import React from "react";
 import styles from "./PlayList.module.css";
 import Track from "./Track.jsx";
 import Player from "./Player.jsx";
+import { getTrackThumbnail } from "../helpers/getTrackThumbnail.js";
 
-function PlayList({ searchList, playList, setPlayList }) {
+function PlayList({ playList, setPlayList }) {
   function handleOnClick(e) {
     const id = e.target.id;
     const tracks = playList.filter((_blank, index) => String(index) !== id);
@@ -18,7 +19,7 @@ function PlayList({ searchList, playList, setPlayList }) {
             <p className={styles.remove} id={index} track={track} onClick={handleOnClick}>
               - Remove from Playlist
             </p>
-            <Track track={track} />
+            <Track track={track} thumbnail={getTrackThumbnail(track)}/>
             <Player track={track} />
           </div>
         ))}
