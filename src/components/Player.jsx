@@ -7,7 +7,7 @@ function Player({ track }) {
 
   useEffect(() => {
     async function getVideo() {
-      const encodedQuery = encodeURIComponent(track.title + ' ' + track.subtitle);
+      const encodedQuery = encodeURIComponent(track.name + ' ' + track.artistName);
       const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodedQuery}&type=video&maxResults=1&key=${key}`;
 
       try {
