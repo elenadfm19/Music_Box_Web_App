@@ -3,6 +3,7 @@ import "./App.css";
 import SearchBar from "./components/SearchBar.jsx";
 import SearchResults from "./components/SearchResults.jsx";
 import PlayList from "./components/PlayList.jsx";
+const API_URL = import.meta.env.VITE_SHAZAM_KEY;
 
 function App() {
   const [query, setQuery] = useState("");
@@ -19,7 +20,7 @@ function App() {
     const options = {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "82691be13amsh0b24a26dc093c4bp1576a1jsnef4dbac8b280",
+        "x-rapidapi-key": `${VITE_SHAZAM_KEY}`,
         "x-rapidapi-host": "shazam.p.rapidapi.com",
       },
     };
